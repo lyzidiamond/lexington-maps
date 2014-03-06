@@ -10,23 +10,46 @@ function onEachFeature(feature, layer) {
 };
 
 function style(feature) {
-  var shared = { stroke: false, fillOpacity: 0.6 };
+  var shared = { stroke: #, fillOpacity: 0.6 };
   var ind;
   switch (feature.properties.DISTRICT) {
-    case 1: ind = { color: "#8dd3c7" };
-    case 2: ind = { color: "#ffffb3" };
-    case 3: ind = { color: "#bebada" };
-    case 4: ind = { color: "#fb8072" };
-    case 5: ind = { color: "#80b1d3" };
-    case 6: ind = { color: "#fdb462" };
-    case 7: ind = { color: "#b3de69" };
-    case 8: ind = { color: "#fccde5" };
-    case 9: ind = { color: "#d9d9d9" };
-    case 10: ind = { color: "#bc80bd" };
-    case 11: ind = { color: "#ccebc5" };
-    case 12: ind = { color: "#ffed6f" };
+    case 1:
+      ind = { color: "#8dd3c7" };
+      break;
+    case 2:
+      ind = { color: "#ffffb3" };
+      break;
+    case 3:
+      ind = { color: "#bebada" };
+      break;
+    case 4:
+      ind = { color: "#fb8072" };
+      break;
+    case 5:
+      ind = { color: "#80b1d3" };
+      break;
+    case 6:
+      ind = { color: "#fdb462" };
+      break;
+    case 7:
+      ind = { color: "#b3de69" };
+      break;
+    case 8:
+      ind = { color: "#fccde5" };
+      break;
+    case 9:
+      ind = { color: "#d9d9d9" };
+      break;
+    case 10:
+      ind = { color: "#bc80bd" };
+      break;
+    case 11:
+      ind = { color: "#ccebc5" };
+      break;
+    case 12:
+      ind = { color: "#ffed6f" };
+      break;
   };
-  debugger;
   return $.extend(shared, ind);
 };
 
