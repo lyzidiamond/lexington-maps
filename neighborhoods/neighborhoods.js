@@ -10,7 +10,7 @@ function onEachFeature(feature, layer) {
 };
 
 function style(feature) {
-  var shared = { stroke: #, fillOpacity: 0.6 };
+  var shared = { stroke: "#111", fillOpacity: 0.6 };
   var ind;
   switch (feature.properties.DISTRICT) {
     case 1:
