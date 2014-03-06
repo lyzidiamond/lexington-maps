@@ -26,6 +26,7 @@ function style(feature) {
     case 11: ind = { color: "#ccebc5" };
     case 12: ind = { color: "#ffed6f" };
   };
+  debugger;
   return $.extend(shared, ind);
 };
 
