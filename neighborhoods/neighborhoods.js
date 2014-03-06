@@ -10,20 +10,23 @@ function onEachFeature(feature, layer) {
 };
 
 function style(feature) {
+  var shared = { stroke: false, fillOpacity: 0.6 };
+  var ind;
   switch (feature.properties.DISTRICT) {
-    case 1: return {color: "#8dd3c7", weight: 0.2, fillOpacity: 0.8};
-    case 2: return {color: "#ffffb3", weight: 0.2, fillOpacity: 0.8};
-    case 3: return {color: "#bebada", weight: 0.2, fillOpacity: 0.8};
-    case 4: return {color: "#fb8072", weight: 0.2, fillOpacity: 0.8};
-    case 5: return {color: "#80b1d3", weight: 0.2, fillOpacity: 0.8};
-    case 6: return {color: "#fdb462", weight: 0.2, fillOpacity: 0.8};
-    case 7: return {color: "#b3de69", weight: 0.2, fillOpacity: 0.8};
-    case 8: return {color: "#fccde5", weight: 0.2, fillOpacity: 0.8};
-    case 9: return {color: "#d9d9d9", weight: 0.2, fillOpacity: 0.8};
-    case 10: return {color: "#bc80bd", weight: 0.2, fillOpacity: 0.8};
-    case 11: return {color: "#ccebc5", weight: 0.2, fillOpacity: 0.8};
-    case 12: return {color: "#ffed6f", weight: 0.2, fillOpacity: 0.8};
+    case 1: ind = { color: "#8dd3c7" };
+    case 2: ind = { color: "#ffffb3" };
+    case 3: ind = { color: "#bebada" };
+    case 4: ind = { color: "#fb8072" };
+    case 5: ind = { color: "#80b1d3" };
+    case 6: ind = { color: "#fdb462" };
+    case 7: ind = { color: "#b3de69" };
+    case 8: ind = { color: "#fccde5" };
+    case 9: ind = { color: "#d9d9d9" };
+    case 10: ind = { color: "#bc80bd" };
+    case 11: ind = { color: "#ccebc5" };
+    case 12: ind = { color: "#ffed6f" };
   };
+  return $.extend(shared, ind);
 };
 
 $.getJSON('./neighborhoods_council.geojson', function(data) {
