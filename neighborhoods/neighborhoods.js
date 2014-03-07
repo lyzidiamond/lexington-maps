@@ -1,5 +1,5 @@
 // initialize map
-var map = L.mapbox.map('neighborhoods-map', 'codeforamerica.hek4o94g', {maxZoom: 12, minZoom: 10}).setView([38.042,-84.515], 10);
+var map = L.mapbox.map('neighborhoods-map', 'codeforamerica.hek4o94g', {maxZoom: 15, minZoom: 10}).setView([38.042,-84.515], 10);
 
 function onEachFeature(feature, layer) {
   var popupContent = "<strong>" + feature.properties.Assoc_Name + "</strong>" + "<br>Council District: District " + feature.properties.DISTRICT + "<br>Council Member: " + feature.properties.REP + "<br>Phone Number: " + feature.properties.TELEPHONE + "<br>Email: " + feature.properties.EMAIL;
