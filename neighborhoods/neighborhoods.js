@@ -6,8 +6,8 @@ function onEachFeature(feature, layer) {
   layer.bindPopup(popupContent);
   layer.on('hover', function(e) {
     var layer = e.target;
-    layer.setStyle({ fillOpacity: 0.9) });
-  })
+    layer.setStyle({ fillOpacity: 0.9 });
+  });
   /* layer.on('click', function(e) {
     map.fitBounds(feature.getBounds(), {reset:true});
   });*/
