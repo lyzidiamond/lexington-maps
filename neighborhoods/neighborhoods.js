@@ -8,9 +8,9 @@ function onEachFeature(feature, layer) {
     var layer = e.target;
     layer.setStyle({ fillOpacity: 0.9 });
   });
-  /* layer.on('click', function(e) {
+  layer.on('click', function(e) {
     map.fitBounds(feature.getBounds(), {reset:true});
-  });*/
+  });
 };
 
 function style(feature) {
