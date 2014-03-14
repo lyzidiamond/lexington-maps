@@ -4,13 +4,13 @@ var map = L.mapbox.map('neighborhoods-map', 'codeforamerica.hek4o94g', {maxZoom:
 function onEachFeature(feature, layer) {
   var popupContent = "<strong>" + feature.properties.Assoc_Name + "</strong>" + "<br>Council District: District " + feature.properties.DISTRICT + "<br>Council Member: " + feature.properties.REP + "<br>Phone Number: " + feature.properties.TELEPHONE + "<br>Email: " + feature.properties.EMAIL;
   layer.bindPopup(popupContent);
-  layer.on('hover', function(e) {
+  /*layer.on('hover', function(e) {
     var layer = e.target;
     layer.setStyle({ fillOpacity: 0.9 });
   });
   layer.on('click', function(e) {
     map.fitBounds(feature.getBounds(), {reset:true});
-  });
+  });*/
 };
 
 function style(feature) {
