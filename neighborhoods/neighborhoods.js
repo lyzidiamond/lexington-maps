@@ -4,56 +4,32 @@ var map = L.mapbox.map('neighborhoods-map', 'codeforamerica.hek4o94g', {maxZoom:
 function onEachFeature(feature, layer) {
   var popupContent = "<strong>" + feature.properties.Assoc_Name + "</strong>" + "<br>Council District: District " + feature.properties.DISTRICT + "<br>Council Member: " + feature.properties.REP + "<br>Phone Number: " + feature.properties.TELEPHONE + "<br>Email: <a href='mailto: " + feature.properties.EMAIL + "''>" + feature.properties.EMAIL + "</a>";
   layer.bindPopup(popupContent);
-  /*layer.on('hover', function(e) {
-    var layer = e.target;
-    layer.setStyle({ fillOpacity: 0.9 });
+  layer.on('hover', function(e) {
+    e.target.setStyle({ fillOpacity: 0.9 });
   });
   layer.on('click', function(e) {
-    map.fitBounds(feature.getBounds(), {reset:true});
-  });*/
+    map.fitBounds(e.target.getBounds(), {reset:true});
+  });
+};
+
+var colors = {
+  "1": "#a6cee3",
+  "2": "#1f78b4",
+  "3": "#b2df8a",
+  "4": "#33a02c",
+  "5": "#fb9a99",
+  "6": "#e31a1c",
+  "7": "#fdbf6f",
+  "8": "#ff7f00",
+  "9": "#cab2d6",
+  "10": "#6a3d9a",
+  "11": "#ffff99",
+  "12": "#b15928"
 };
 
 function style(feature) {
   var shared = { stroke: "#111", strokeWidth: 0.1, fillOpacity: 0.6 };
-  var ind;
-  switch (feature.properties.DISTRICT) {
-    case 1:
-      ind = { color: "#a6cee3" };
-      break;
-    case 2:
-      ind = { color: "#1f78b4" };
-      break;
-    case 3:
-      ind = { color: "#b2df8a" };
-      break;
-    case 4:
-      ind = { color: "#33a02c" };
-      break;
-    case 5:
-      ind = { color: "#fb9a99" };
-      break;
-    case 6:
-      ind = { color: "#e31a1c" };
-      break;
-    case 7:
-      ind = { color: "#fdbf6f" };
-      break;
-    case 8:
-      ind = { color: "#ff7f00" };
-      break;
-    case 9:
-      ind = { color: "#cab2d6" };
-      break;
-    case 10:
-      ind = { color: "#6a3d9a" };
-      break;
-    case 11:
-      ind = { color: "#ffff99" };
-      break;
-    case 12:
-      ind = { color: "#b15928" };
-      break;
-  };
+  var ind = colors[feature.properties.District];
   return $.extend(shared, ind);
 };
 
