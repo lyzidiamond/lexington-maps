@@ -23,7 +23,7 @@ var colors = {
 
 function style(feature) {
   var shared = { weight: 1, fillOpacity: 0.9 };
-  var ind = { color: colors[feature.properties.District] };
+  var ind = { color: colors[feature.properties.DISTRICT] };
   return $.extend(shared, ind);
 };
 
