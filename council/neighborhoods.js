@@ -6,7 +6,7 @@ var colors = {
   "2": "#6baed6",
   "3": "#c6dbef",
   "4": "#c6dbef",
-  "5": "#c6dbef",
+  "5": "#6baed6",
   "6": "#6baed6",
   "7": "#c6dbef",
   "8": "#2171b5",
