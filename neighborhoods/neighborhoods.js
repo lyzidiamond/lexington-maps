@@ -4,12 +4,6 @@ var map = L.mapbox.map('neighborhoods-map', 'codeforamerica.hek4o94g', {maxZoom:
 function onEachFeature(feature, layer) {
   var popupContent = "<strong>" + feature.properties.Assoc_Name + "</strong>" + "<br>Council District: District " + feature.properties.DISTRICT + "<br>Council Member: " + feature.properties.REP + "<br>Phone Number: " + feature.properties.TELEPHONE + "<br>Email: <a href='mailto: " + feature.properties.EMAIL + "''>" + feature.properties.EMAIL + "</a>";
   layer.bindPopup(popupContent);
-  layer.on('hover', function(e) {
-    e.target.setStyle({ fillOpacity: 0.9 });
-  });
-  layer.on('click', function(e) {
-    map.fitBounds(e.target.getBounds(), {reset:true});
-  });
 };
 
 var colors = {
@@ -29,7 +23,7 @@ var colors = {
 
 function style(feature) {
   var shared = { weight: 1, fillOpacity: 0.9 };
-  var ind = { fillColor: colors[feature.properties.District] };
+  var ind = { color: colors[feature.properties.District] };
   return $.extend(shared, ind);
 };
 
