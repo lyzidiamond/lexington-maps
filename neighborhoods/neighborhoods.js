@@ -7,6 +7,12 @@ function onEachFeature(feature, layer) {
   layer.on('click', function(e) {
     map.fitBounds(e.target.getBounds());
   });
+  layer.on('mouseover', function(e) {
+    e.target.setStyle({ fillOpacity: 0.9 });
+  });
+  layer.on('mouseout', function(e) {
+    e.target.setStyle({ fillOpacity: 0.6 });
+  });
 };
 
 var colors = {
@@ -25,7 +31,7 @@ var colors = {
 };
 
 function style(feature) {
-  var shared = { color: 'black', weight: 1, fillOpacity: 0.9 };
+  var shared = { color: 'black', weight: 1, fillOpacity: 0.6 };
   var ind = { fillColor: colors[feature.properties.DISTRICT] };
   return $.extend(shared, ind);
 };
