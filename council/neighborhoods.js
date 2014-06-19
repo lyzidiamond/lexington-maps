@@ -5,7 +5,7 @@ var colors = {
   "1": "#c6dbef",
   "2": "#6baed6",
   "3": "#c6dbef",
-  "4": "#6baed6",
+  "4": "#c6dbef",
   "5": "#c6dbef",
   "6": "#6baed6",
   "7": "#c6dbef",
@@ -13,7 +13,7 @@ var colors = {
   "9": "#c6dbef",
   "10": "#2171b5",
   "11": "#c6dbef",
-  "12": "#2171b5"
+  "12": "#c6dbef"
 };
 
 function style(feature) {
