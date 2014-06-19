@@ -17,7 +17,7 @@ var colors = {
 };
 
 function style(feature) {
-  var shared = { strokeWidth: 0.1, color: 'black', fillOpacity: 0.6 };
+  var shared = { strokeWidth: 0.01, color: 'black', fillOpacity: 0.9 };
   var ind = { fillColor: colors[feature.properties.DISTRICT] };
   return $.extend(shared, ind);
 };
