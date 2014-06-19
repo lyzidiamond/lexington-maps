@@ -28,8 +28,8 @@ var colors = {
 };
 
 function style(feature) {
-  var shared = { stroke: "#111", strokeWidth: 0.1, fillOpacity: 0.6 };
-  var ind = colors[feature.properties.District];
+  var shared = { weight: 1, color: 'black', fillOpacity: 0.9 };
+  var ind = { fillColor: colors[feature.properties.District] };
   return $.extend(shared, ind);
 };
 
