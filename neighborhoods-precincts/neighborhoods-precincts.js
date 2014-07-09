@@ -1,5 +1,5 @@
 // initialize map
-var map = L.map('neighborhoods-precincts', {maxZoom: 15, minZoom: 10}).setView([38.042,-84.515], 11);
+var map = L.map('neighborhoods-precincts', {maxZoom: 15, minZoom: 10}).setView([38.042,-84.515], 10);
 
 var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.hek4o94g/{z}/{x}/{y}.png').addTo(map);
 
