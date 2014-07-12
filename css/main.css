@@ -29,12 +29,26 @@ body {
   margin-bottom: 20px;
 }
 
+footer {
+  margin-top: 30px;
+  background-color: #007F7D;
+  height: 100px;
+}
+
+/*maps*/
 #map { 
   position:absolute; 
   top:0; 
   bottom:0; 
   width:100%; 
 }
+
+#neighborhoods-precincts, #neighborhoods-map {
+  height: 600px;
+  margin-bottom: 30px;
+}
+
+
 
 /*bootstrap customizations*/
 .navbar {
